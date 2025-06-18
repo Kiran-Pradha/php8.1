@@ -1,8 +1,9 @@
-FROM php:8.2-cli
+FROM php:8.1-cli
 
-COPY . /app
 WORKDIR /app
 
-EXPOSE 8080
+COPY . .
 
-CMD ["php", "-S", "0.0.0.0:8080", "index.php"]
+EXPOSE 8000
+
+CMD ["php", "-S", "0.0.0.0:8000"]
